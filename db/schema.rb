@@ -11,63 +11,61 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150614044429) do
-
+ActiveRecord::Schema.define(version: 20_150_614_044_429) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "cats", force: :cascade do |t|
-    t.string   "name"
-    t.string   "description"
-    t.string   "personality"
-    t.integer  "strength"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+  create_table 'cats', force: :cascade do |t|
+    t.string 'name'
+    t.string 'description'
+    t.string 'personality'
+    t.integer 'strength'
+    t.datetime 'created_at',  null: false
+    t.datetime 'updated_at',  null: false
   end
 
-  create_table "goods", force: :cascade do |t|
-    t.string   "name"
-    t.string   "description"
-    t.string   "price_type"
-    t.integer  "price_value"
-    t.string   "size"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+  create_table 'goods', force: :cascade do |t|
+    t.string 'name'
+    t.string 'description'
+    t.string 'price_type'
+    t.integer 'price_value'
+    t.string 'size'
+    t.datetime 'created_at',  null: false
+    t.datetime 'updated_at',  null: false
   end
 
-  create_table "snaps", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'snaps', force: :cascade do |t|
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "spots", force: :cascade do |t|
-    t.integer  "position_id"
-    t.integer  "yard_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+  create_table 'spots', force: :cascade do |t|
+    t.integer 'position_id'
+    t.integer 'yard_id'
+    t.datetime 'created_at',  null: false
+    t.datetime 'updated_at',  null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.integer  "silver"
-    t.integer  "gold"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'users', force: :cascade do |t|
+    t.integer 'silver'
+    t.integer 'gold'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "visits", force: :cascade do |t|
-    t.integer  "cat_id"
-    t.integer  "user_id"
-    t.integer  "spot_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'visits', force: :cascade do |t|
+    t.integer 'cat_id'
+    t.integer 'user_id'
+    t.integer 'spot_id'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "yards", force: :cascade do |t|
-    t.string   "name"
-    t.string   "price_type"
-    t.integer  "price_value"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+  create_table 'yards', force: :cascade do |t|
+    t.string 'name'
+    t.string 'price_type'
+    t.integer 'price_value'
+    t.datetime 'created_at',  null: false
+    t.datetime 'updated_at',  null: false
   end
-
 end

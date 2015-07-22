@@ -49,11 +49,12 @@ class CatsController < ApplicationController
   end
 
   private
-    def set_cat
-      @cat = Cat.find(params[:id])
-    end
 
-    def cat_params
-      params.require(:cat).permit(:name, :description, :personality, :strength)
-    end
+  def set_cat
+    @cat = Cat.find(params[:id])
+  end
+
+  def cat_params
+    params.require(:cat).permit(:name, :description, :personality, :strength)
+  end
 end

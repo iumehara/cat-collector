@@ -1,3 +1,35 @@
 <p id="notice"><%= notice %></p>
 
-<%= render @cat %>
+<div class="cat-profile">
+	<h1>
+		<%= @cat.name %>
+	</h1>
+	<div>
+		<div class="top-snap">
+			<%= image_tag("http://animalia-life.com/data_images/cat/cat7.jpg") %>
+			<div>
+				<%= @cat.description %>
+			</div>
+		</div>
+		<div class="stats">
+			<div>
+				<h3>せいかく</h3>
+				<div><%= @cat.personality %></div>
+			</div>
+			<div>
+				<h3>せんとうりょく</h3>
+				<div><%= @cat.strength %></div>
+			</div>
+			<div>
+				<h3>きた回数</h3>
+				<div>77</div>
+			</div>
+		</div>
+	</div>
+	<div>
+		<div>played goods</div>
+		<div>album</div>
+		<div>gift</div>
+	</div>
+
+</div>

@@ -1,3 +1,3 @@
 class Good < ActiveRecord::Base
-	belongs_to :spot
+  belongs_to :spot
 end

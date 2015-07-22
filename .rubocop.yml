@@ -1,0 +1,55 @@
+# inherit_from: .rubocop_todo.yml
+
+AllCops:
+  Exclude:
+    - 'config/unicorn.rb'
+    - 'bin/*'
+
+# Not fixing these:
+Style/NegatedIf:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false
+
+Style/EmptyLinesAroundModuleBody:
+  Enabled: false
+
+Style/EmptyLinesAroundClassBody:
+  Enabled: false
+
+Lint/AmbiguousRegexpLiteral:
+  Enabled: false
+
+Style/RegexpLiteral:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 35
+
+# Configuration parameters: AllowURI, URISchemes.
+Metrics/LineLength:
+  Max: 216
+
+# Configuration parameters: CountComments.
+Metrics/MethodLength:
+  Max: 45
+
+Metrics/ClassLength:
+  Max: 268
+
+Style/Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+  # EnforcedStyle: compact
+
+Lint/UnusedMethodArgument:
+  Enabled: false
+
+Lint/UnusedBlockArgument:
+  Enabled: false

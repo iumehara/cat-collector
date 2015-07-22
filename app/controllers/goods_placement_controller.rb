@@ -11,7 +11,6 @@ class GoodsController < ApplicationController
 
   def place
     @good = Good.find(params[:id])
-    
   end
 
   def create
@@ -30,7 +29,7 @@ class GoodsController < ApplicationController
 
   private
 
-    def good_params
-      params.require(:good).permit(:name, :price_type, :price_value, :size)
-    end
+  def good_params
+    params.require(:good).permit(:name, :price_type, :price_value, :size)
+  end
 end

@@ -7,81 +7,80 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.create(
-	silver: 100,
-	gold: 20)
+  silver: 100,
+  gold: 20)
 
 Cat.create(
-	name: "しろねこさん",
-	description: "白",
-	personality: "おっとり",
-	strength: "77")
+  name: 'しろねこさん',
+  description: '白',
+  personality: 'おっとり',
+  strength: '77')
 Cat.create(
-	name: "くろねこさん",
-	description: "黒",
-	personality: "ツンデレ",
-	strength: "77")
+  name: 'くろねこさん',
+  description: '黒',
+  personality: 'ツンデレ',
+  strength: '77')
 Cat.create(
-	name: "しろくろさん",
-	description: "白黒",
-	personality: "おちょうしもの",
-	strength: "67")
+  name: 'しろくろさん',
+  description: '白黒',
+  personality: 'おちょうしもの',
+  strength: '67')
 Cat.create(
-	name: "はいいろさん",
-	description: "灰",
-	personality: "ふしぎちゃん",
-	strength: "83")
+  name: 'はいいろさん',
+  description: '灰',
+  personality: 'ふしぎちゃん',
+  strength: '83')
 
 Good.create(
-	name: 'ゴムボール（赤）',
-	description: 'ぼよんぼよんとhなえる\nゴム製の赤いボール\n柔らかさと弾力で飽きがない！',
-	price_type: 's',
-	price_value: 60,
-	size: 's'
+  name: 'ゴムボール（赤）',
+  description: 'ぼよんぼよんとhなえる\nゴム製の赤いボール\n柔らかさと弾力で飽きがない！',
+  price_type: 's',
+  price_value: 60,
+  size: 's'
 )
 Good.create(
-	name: 'ダンボール（小）',
-	description: '謎の多い不思議な魅力の小箱',
-	price_type: 's',
-	price_value: 70,
-	size: 's'
+  name: 'ダンボール（小）',
+  description: '謎の多い不思議な魅力の小箱',
+  price_type: 's',
+  price_value: 70,
+  size: 's'
 )
 Good.create(
-	name: 'ねずみさん',
-	description: '本能をくずぐるフォルムで\nねこたちのハートをキャッチ',
-	price_type: 's',
-	price_value: 170,
-	size: 's'
+  name: 'ねずみさん',
+  description: '本能をくずぐるフォルムで\nねこたちのハートをキャッチ',
+  price_type: 's',
+  price_value: 170,
+  size: 's'
 )
 Good.create(
-	name: 'こたつ',
-	description: 'ねこ専用こたつ\nあったかふとんから抜け出せない！\n冬の定番といえばこれ',
-	price_type: 'g',
-	price_value: 36,
-	size: 'l'
+  name: 'こたつ',
+  description: 'ねこ専用こたつ\nあったかふとんから抜け出せない！\n冬の定番といえばこれ',
+  price_type: 'g',
+  price_value: 36,
+  size: 'l'
 )
 Yard.create(
-	name: 'backyard',
-	price_type: 's',
-	price_value: 0
+  name: 'backyard',
+  price_type: 's',
+  price_value: 0
 )
 Spot.create(
-	yard_id: 1,
-	position_id: 1	
+  yard_id: 1,
+  position_id: 1
 )
 Spot.create(
-	yard_id: 1,
-	position_id: 2
+  yard_id: 1,
+  position_id: 2
 )
 Spot.create(
-	yard_id: 1,
-	position_id: 3	
+  yard_id: 1,
+  position_id: 3
 )
 Spot.create(
-	yard_id: 1,
-	position_id: 4	
+  yard_id: 1,
+  position_id: 4
 )
 Spot.create(
-	yard_id: 1,
-	position_id: 5	
+  yard_id: 1,
+  position_id: 5
 )
-

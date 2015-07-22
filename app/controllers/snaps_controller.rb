@@ -1,5 +1,4 @@
 class SnapsController < ApplicationController
-
   def index
     @cat = Cat.find(params[:cat_id])
     @cat.snaps = Snap.all
@@ -38,7 +37,7 @@ class SnapsController < ApplicationController
 
   private
 
-    def snap_params
-      params[:snap]
-    end
+  def snap_params
+    params[:snap]
+  end
 end

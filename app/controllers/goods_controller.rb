@@ -50,12 +50,13 @@ class GoodsController < ApplicationController
   end
 
   private
-    def set_good
-      @good = Good.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def good_params
-      params.require(:good).permit(:name, :price_type, :price_value, :size)
-    end
+  def set_good
+    @good = Good.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def good_params
+    params.require(:good).permit(:name, :price_type, :price_value, :size)
+  end
 end
