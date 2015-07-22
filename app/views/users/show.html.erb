@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Silver:</strong>
+  <%= @user.silver %>
+</p>
+
+<p>
+  <strong>Gold:</strong>
+  <%= @user.gold %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
