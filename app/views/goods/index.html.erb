@@ -1,33 +1,13 @@
-<p id="notice"><%= notice %></p>
+<div style='height:100%; background-color: #81FD7C;'>
+	<%= render 'shared/menu' %>
 
-<h1>Listing Goods</h1>
+	<h1>toys</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Price type</th>
-      <th>Price value</th>
-      <th>Size</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+	<% @goods.each do |good| %>
+	  <%= render 'good_card', good: good %>
 
-  <tbody>
-    <% @goods.each do |good| %>
-      <tr>
-        <td><%= good.name %></td>
-        <td><%= good.price_type %></td>
-        <td><%= good.price_value %></td>
-        <td><%= good.size %></td>
-        <td><%= link_to 'Show', good %></td>
-        <td><%= link_to 'Edit', edit_good_path(good) %></td>
-        <td><%= link_to 'Destroy', good, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+	<% end %>
 
-<br>
-
-<%= link_to 'New Good', new_good_path %>
+	<div style='clear:both;'>
+	</div>
+</div>

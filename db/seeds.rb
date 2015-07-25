@@ -84,3 +84,7 @@ Spot.create(
   yard_id: 1,
   position_id: 5
 )
+Spot.create(
+  yard_id: 1,
+  position_id: 6
+)

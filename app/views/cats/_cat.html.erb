@@ -1,11 +1,14 @@
-<div class="cat-index">
-	<h1>
-		<%= cat.name %>
-	</h1>
-	<div class="top-snap">
-		<%= image_tag("http://animalia-life.com/data_images/cat/cat7.jpg") %>
+
+<%= link_to cat do %>
+	<div class="cat-index">
+		<h1 class='name'>
+			<%= cat.name %>
+		</h1>
+		<%= image_tag("cat7.jpg") %>
+
+		<h3 class="visit">
+			2015/07/01
+		</h3>
 	</div>
-	<div class="stats">
-		2015/07/01
-	</div>
-</div>
+
+<% end %>

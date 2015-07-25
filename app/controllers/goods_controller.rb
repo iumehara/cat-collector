@@ -5,14 +5,14 @@ class GoodsController < ApplicationController
     @goods = Good.all
   end
 
-  def show
-  end
-
   def new
     @good = Good.new
   end
 
   def edit
+    @good = Good.find(params[:id])
+    @yard = Yard.first
+    render 'yards/show'
   end
 
   def create
@@ -30,6 +30,7 @@ class GoodsController < ApplicationController
   end
 
   def update
+    good_params = { spot_id: params[:spot_id] }
     respond_to do |format|
       if @good.update(good_params)
         format.html { redirect_to @good, notice: 'Good was successfully updated.' }
@@ -56,7 +57,7 @@ class GoodsController < ApplicationController
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
-  def good_params
-    params.require(:good).permit(:name, :price_type, :price_value, :size)
-  end
+  # def good_params
+  # params.require(:good).permit(:name, :price_type, :price_value, :size, :spot_id)
+  # end
 end

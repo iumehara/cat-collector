@@ -1,16 +1,18 @@
 Rails.application.routes.draw do
-  resources :spots
-  resources :yards
-  resources :visits
-  resources :snaps
-  resources :users
-  resources :goods
+  root 'yards#show'
+
   resources :cats
+
+  resources :goods
+
+  resources :spots
+
+  resources :users
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'cats#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,0 +1,30 @@
+
+.modal-button {
+	border: 5px solid black;
+	border-radius: 20px;
+	width: 100px;
+	height: 100px;
+	margin-bottom: 20px;
+	background-color: white;
+}
+
+.modal-body.menu {
+	border: 5px solid black;
+	border-radius: 20px;
+	width: 480px;
+	height: 480px;
+	background-color: beige;
+	padding: 20px;
+	.menu-button {
+		border: 5px solid black;
+		border-radius: 20px;
+		height: 100px;
+		width: 100px;
+		float: left;
+		margin: 20px;
+		h2 {
+			font-size: 10px;
+			text-align: center;
+		}
+	}
+}

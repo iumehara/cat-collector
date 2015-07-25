@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_150_614_044_429) do
+ActiveRecord::Schema.define(version: 20_150_724_024_416) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -20,8 +20,12 @@ ActiveRecord::Schema.define(version: 20_150_614_044_429) do
     t.string 'description'
     t.string 'personality'
     t.integer 'strength'
-    t.datetime 'created_at',  null: false
-    t.datetime 'updated_at',  null: false
+    t.datetime 'created_at',         null: false
+    t.datetime 'updated_at',         null: false
+    t.string 'image_file_name'
+    t.string 'image_content_type'
+    t.integer 'image_file_size'
+    t.datetime 'image_updated_at'
   end
 
   create_table 'goods', force: :cascade do |t|
@@ -30,8 +34,13 @@ ActiveRecord::Schema.define(version: 20_150_614_044_429) do
     t.string 'price_type'
     t.integer 'price_value'
     t.string 'size'
-    t.datetime 'created_at',  null: false
-    t.datetime 'updated_at',  null: false
+    t.integer 'spot_id'
+    t.datetime 'created_at',         null: false
+    t.datetime 'updated_at',         null: false
+    t.string 'image_file_name'
+    t.string 'image_content_type'
+    t.integer 'image_file_size'
+    t.datetime 'image_updated_at'
   end
 
   create_table 'snaps', force: :cascade do |t|

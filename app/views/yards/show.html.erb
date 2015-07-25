@@ -1,9 +1,9 @@
-<p id="notice"><%= notice %></p>
+<div class='container-fixed yard'>
+	<%= render 'shared/menu' %>
 
-<h1>This is the yard!</h1>
+	<% @yard.spots.each do |spot| %>
 
-<% @yard.spots.each do |spot| %>
+		<%= render spot %>
 
-	<%= spot.id %>
-
-<% end %>
+	<% end %>
+</div>
