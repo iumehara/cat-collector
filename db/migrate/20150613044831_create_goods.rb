@@ -7,6 +7,7 @@ class CreateGoods < ActiveRecord::Migration
       t.integer :price_value
       t.string :size
       t.integer :spot_id
+      t.string :image_name
 
       t.timestamps null: false
     end

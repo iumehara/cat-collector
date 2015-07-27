@@ -2,35 +2,39 @@
 	position: relative;
 	height: 100px;
 	width: 100px;
+	div.spot-box {
+		height: 100%;
+	}
 }
 
-.loc-1 {
+.spot.loc-1 {
 	top: 260px;
 	left: 150px;
 	border: 1px solid red;
 }
-.loc-2 {
+.spot.loc-2 {
 	top: 100px;
 	left: 400px;
 	border: 1px solid orange;
 }
-.loc-3 {
+.spot.loc-3 {
 	top: 150px;
 	left: 450px;
 	border: 1px solid green;
 }
-.loc-4 {
+.spot.loc-4 {
 	top: 170px;
 	left: 400px;
 	border: 1px solid blue;
 }
-.loc-5 {
-	top: 200px;
+.spot.loc-5 {
+	top: 150px;
 	left: 750px;
 	border: 1px solid purple;
 }
-.loc-6 {
-	top: 150px;
-	left: 300px;
-	border: 1px solid purple;
+
+.dish.loc-1 {
+	position: relative;
+	top: 130px;
+	left: 250px;
 }

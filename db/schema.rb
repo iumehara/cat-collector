@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_150_724_024_416) do
+ActiveRecord::Schema.define(version: 20_150_726_042_335) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -20,12 +20,31 @@ ActiveRecord::Schema.define(version: 20_150_724_024_416) do
     t.string 'description'
     t.string 'personality'
     t.integer 'strength'
-    t.datetime 'created_at',         null: false
-    t.datetime 'updated_at',         null: false
-    t.string 'image_file_name'
-    t.string 'image_content_type'
-    t.integer 'image_file_size'
-    t.datetime 'image_updated_at'
+    t.string 'image_name'
+    t.datetime 'created_at',  null: false
+    t.datetime 'updated_at',  null: false
+  end
+
+  create_table 'dishes', force: :cascade do |t|
+    t.integer 'position_id'
+    t.integer 'yard_id'
+    t.integer 'amount'
+    t.datetime 'created_at',  null: false
+    t.datetime 'updated_at',  null: false
+  end
+
+  create_table 'foods', force: :cascade do |t|
+    t.string 'name'
+    t.string 'description'
+    t.string 'price_type'
+    t.integer 'price_value'
+    t.string 'size'
+    t.integer 'dish_id'
+    t.integer 'amount'
+    t.string 'image_empty_name'
+    t.string 'image_full_name'
+    t.datetime 'created_at',       null: false
+    t.datetime 'updated_at',       null: false
   end
 
   create_table 'goods', force: :cascade do |t|
@@ -35,17 +54,9 @@ ActiveRecord::Schema.define(version: 20_150_724_024_416) do
     t.integer 'price_value'
     t.string 'size'
     t.integer 'spot_id'
-    t.datetime 'created_at',         null: false
-    t.datetime 'updated_at',         null: false
-    t.string 'image_file_name'
-    t.string 'image_content_type'
-    t.integer 'image_file_size'
-    t.datetime 'image_updated_at'
-  end
-
-  create_table 'snaps', force: :cascade do |t|
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+    t.string 'image_name'
+    t.datetime 'created_at',  null: false
+    t.datetime 'updated_at',  null: false
   end
 
   create_table 'spots', force: :cascade do |t|
@@ -58,14 +69,6 @@ ActiveRecord::Schema.define(version: 20_150_724_024_416) do
   create_table 'users', force: :cascade do |t|
     t.integer 'silver'
     t.integer 'gold'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-  end
-
-  create_table 'visits', force: :cascade do |t|
-    t.integer 'cat_id'
-    t.integer 'user_id'
-    t.integer 'spot_id'
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
   end

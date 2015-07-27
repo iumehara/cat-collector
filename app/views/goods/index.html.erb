@@ -1,11 +1,14 @@
-<div style='height:100%; background-color: #81FD7C;'>
+<div style='height:100%; background-color: #CFFFBF;'>
 	<%= render 'shared/menu' %>
 
-	<h1>toys</h1>
+	<h1 style='text-align:center;'>toys</h1>
 
+<!-- 	<% @foods.each do |food| %>
+		<%= render 'good_card', good: food %>
+	<% end %>
+ -->
 	<% @goods.each do |good| %>
 	  <%= render 'good_card', good: good %>
-
 	<% end %>
 
 	<div style='clear:both;'>

@@ -3,7 +3,10 @@
 
 	<% @yard.spots.each do |spot| %>
 
-		<%= render spot %>
+			<%= render spot %>
 
 	<% end %>
+
+	<%= render @yard.dish %>
+
 </div>

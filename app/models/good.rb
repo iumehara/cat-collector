@@ -1,6 +1,8 @@
 class Good < ActiveRecord::Base
   belongs_to :spot
-  has_attached_file :image
 
-  validates_attachment_content_type :image, content_type: 'image/png'
+  def image
+    AWS_S3_PATH + image_name
+  end
+
 end

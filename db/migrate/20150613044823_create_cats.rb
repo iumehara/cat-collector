@@ -5,6 +5,7 @@ class CreateCats < ActiveRecord::Migration
       t.string :description
       t.string :personality
       t.integer :strength
+      t.string :image_name
 
       t.timestamps null: false
     end
