@@ -1,0 +1,18 @@
+<div class="dish loc-<%= dish.id %>">
+
+	<%= link_to '', data: { toggle:'modal', target:'#foodModal'} do %>
+		<%= render 'goods/good', good: dish.food if dish.food %>
+	<% end %>
+</div>
+
+<div class="modal fade" id="foodModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+  	<%= render 'foods/food_status', food: dish.food %>
+
+		<div class='modal-body dish-question'>
+			<h4>Would you like to refill the <%= dish.food.name %>?</h4>
+			<%= link_to 'yes', dish_path(dish), method: :put, class: 'btn btn-warning btn-lg yes' %>
+			<%= link_to 'no', '#', class: 'btn btn-default btn-lg no', 'data-dismiss' => 'modal', 'aria-label' => 'Close' %>
+	  </div>
+	</div>
+</div>

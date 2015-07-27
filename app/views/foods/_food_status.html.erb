@@ -1,0 +1,12 @@
+<div class="food-card">
+	<h1 class='name'>
+		<%= food.name %>
+	</h1>
+	<div class='food-img'>
+		<%= image_tag food.image %>
+	</div>
+
+	<div class='food-meter'>
+		<div class='food-amount' style='width:<%= @yard.dish.percent %>px'></div>
+	</div>
+</div>
