@@ -1,6 +1,6 @@
 	<div class="spot loc-<%= spot.id %>">
 		<% if @good %>
-			<%= link_to good_path(id: @good.id, spot_id: spot.id), {method: :put}, {} do %>
+			<%= link_to good_path(id: @good.id, spot_id: spot.id), { method: :put, id: "spot-#{spot.id}" } do %>
 				<div class='spot-box'>
 					<%= render spot.good if spot.good %>
 				</div>

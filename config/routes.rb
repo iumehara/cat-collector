@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   root 'yards#show'
 
+  resources :cats
+
   resources :dishes, only: [:update]
 
   resources :foods
-
-  resources :cats
 
   resources :goods
 

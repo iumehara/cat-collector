@@ -6,7 +6,7 @@ class Dish < ActiveRecord::Base
     amount.blank? || amount == 0
   end
 
-  def percent
+  def percent_px # pixels of 200px bar
     amount / food.amount.to_f * 200
   end
 
